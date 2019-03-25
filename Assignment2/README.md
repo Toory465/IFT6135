@@ -45,14 +45,15 @@ First, place the files {RNN_best_params.pt, GRU_best_params.pt, TRANSFORMER_best
 <li>python plot_script.py --Q=5.1</li>
 
 <h3>5.2: [DONE]</h3>
+<ul>
 <li>python Q5-ptb-lm.py --model=RNN --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.2</li>
 <li>python Q5-ptb-lm.py --model=GRU --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.2</li>
 <li>python plot_script.py --Q=5.2</li>
-
+</ul>
 <h3>5.3: [DONE]</h3>
 <ul>
-python Q5-ptb-lm.py --model=RNN --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
-python Q5-ptb-lm.py --model=RNN --batch_size=20 --seq_len=70 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
-python Q5-ptb-lm.py --model=GRU --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
-python Q5-ptb-lm.py --model=GRU --batch_size=20 --seq_len=70 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
+<li>python Q5-ptb-lm.py --model=RNN --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
+<li>python Q5-ptb-lm.py --model=RNN --batch_size=20 --seq_len=70 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
+<li>python Q5-ptb-lm.py --model=GRU --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
+<li>python Q5-ptb-lm.py --model=GRU --batch_size=20 --seq_len=70 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.3</li>
 </ul>
