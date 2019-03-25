@@ -38,13 +38,13 @@ if args.Q == '4.1':
 
 		fig,ax = plt.subplots(1)
 		plt.grid()
-		ax.set_title("{}-{}-Original Hyperparameters".format(path[1],path[2]))
+		ax.set_title("{} ({}) Learning Curve per Epochs".format(path[1],path[2]))
 		ax.plot(train_ppls[1:],label="Train PPL") #Start from 1 as the first PPL is too high
 		ax.plot(val_ppls[1:],label="Validation PPL") #Start from 1 as the first PPL is too high
 		ax.legend()
 		ax.set_xlabel("Epochs")
 		ax.set_ylabel("PPL")	
-		plt.savefig("plots/4.1/{}_{}_orig.jpg".format(path[1],path[2]))
+		plt.savefig("plots/4.1/{}_{}.jpg".format(path[1],path[2]))
 		plt.close()
 
 		with open('{}/{}/log.txt'.format(res_path,path[0])) as f:
@@ -53,13 +53,13 @@ if args.Q == '4.1':
 		x = np.cumsum(np.asarray([float(row[4][len('time (s) spent in epoch: '):]) for row in log]))[1:]
 		fig,ax = plt.subplots(1)
 		plt.grid()
-		ax.set_title("(4.1) {}-{}-Original Hyperparameters".format(path[1],path[2]))
+		ax.set_title("{} ({}) Learning Curve per wall-clock-time".format(path[1],path[2]))
 		ax.plot(x,train_ppls[1:],label="Train PPL") #Start from 1 as the first PPL is too high
 		ax.plot(x,val_ppls[1:],label="Validation PPL") #Start from 1 as the first PPL is too high
 		ax.legend()
 		ax.set_xlabel("Time (seconds)")
-		ax.set_ylabel("PPL")	
-		plt.savefig("plots/4.1/{}_{}_orig_seconds.jpg".format(path[1],path[2]))
+		ax.set_ylabel("PPL")
+		plt.savefig("plots/4.1/{}_{}_seconds.jpg".format(path[1],path[2]))
 		plt.close()
 
 
@@ -69,7 +69,7 @@ elif args.Q == '4.4':
 		paths = filter_paths([optim])
 		fig,ax = plt.subplots(1)
 		plt.grid()
-		ax.set_title("Model comparison for {}".format(optim))
+		ax.set_title("Models trained with {}".format(optim))
 		for path in paths:
 			curves = np.load("{}/{}/learning_curves.npy".format(res_path,path[0])).item()
 			train_ppls,val_ppls = curves['train_ppls'],curves['val_ppls']
@@ -82,7 +82,7 @@ elif args.Q == '4.4':
 
 		fig,ax = plt.subplots(1)
 		plt.grid()
-		ax.set_title("Model comparison for {}".format(optim))
+		ax.set_title("Models trained with {}".format(optim))
 		for path in paths:
 			curves = np.load("{}/{}/learning_curves.npy".format(res_path,path[0])).item()
 			train_ppls,val_ppls = curves['train_ppls'],curves['val_ppls']
