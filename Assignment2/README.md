@@ -1,9 +1,7 @@
-# IFT6135
-Assignment 2 practical solutions.
+<h1> IFT6135 Assignment 2 Practical Solutions </h1>
+<h2> Guide to recreating our answers: </h2>
 <br>
-############################<br>
-######## QUESTION 4 ##########<br>
-############################<br>
+<h3>Question 4:</h3>
 <br>
 4.1: [DONE]<br>
 python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --save_best<br>
