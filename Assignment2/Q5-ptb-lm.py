@@ -336,7 +336,7 @@ load_path = None
 if (args.Q == '5.1') or (args.Q == '5.2') or (args.Q == '5.3'):
 	print('########### Running question %s ############' % args.Q)
 	arch = args.model
-	load_path = '{}_best_params.pt'.format(arch)
+	load_path = 'numpy_files/best_params/{}_best_params.pt'.format(arch)
 	model.load_state_dict(torch.load(load_path,map_location='cpu'))
 	model.eval()
 #########################################################
@@ -541,7 +541,7 @@ def run_generation(model, data):
 if args.Q == '5.1':
 	print("\n##########  Computing Loss t ##########################")
 	mean_loss_t = run_losst(model, valid_data)
-	np.save('%s_losst.npy' % args.model ,mean_loss_t)
+	np.save('numpy_files/losst/%s_losst.npy' % args.model ,mean_loss_t)
 	print('Values saved to disk.')
 	sys.exit()
 
@@ -550,7 +550,7 @@ if args.Q == '5.2':
 	print("\n##########  Computing Hidden Grads ##########################")
 	hgrads = run_hgrads(model, train_data)
 	hgrads = {k:np.linalg.norm(np.mean(v.cpu().numpy(), axis=0)) for k,v in hgrads.items()}
-	np.save('%s_hgrads.npy' % args.model,hgrads)
+	np.save('numpy_files/hgrads/%s_hgrads.npy' % args.model,hgrads)
 	print(hgrads)
 	print('Gradients saved to disk.')
 	sys.exit()
@@ -561,7 +561,7 @@ if args.Q == '5.3':
 	generated_sentences = run_generation(model, valid_data) # TAKES FIRST WORD FROM FIRST MINIBATCH FROM VALIDATION SET
 	sentences_text = '\n'.join(sentence for sentence in generated_sentences)
 	print(sentences_text)
-	with open('%s_generation_%d.txt'% (args.model, args.seq_len), 'w') as f:
+	with open('generations/%s_generation_%d.txt'% (args.model, args.seq_len), 'w') as f:
 		f.write(sentences_text)
 	print('Sentences saved to disk.')
 	sys.exit()
