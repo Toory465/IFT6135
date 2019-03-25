@@ -38,7 +38,7 @@ Plot figures of models in 'final_res' directory by running the following command
 </ul>
 <h3>Question 5:</h3>
 <h3>5.1: [DONE]</h3>
-First, place the files {RNN_best_params.pt, GRU_best_params.pt, TRANSFORMER_best_params.pt} in the directory 'IFT6135/Assignment2/numpy_files/best_params/'. Then, run the following:
+First, place the files {RNN_best_params.pt, GRU_best_params.pt, TRANSFORMER_best_params.pt} in the directory 'IFT6135/Assignment2/numpy_files/best_params/'. Then, run the following:<br>
 <li>python Q5-ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.1</li>
 <li>python Q5-ptb-lm.py --model=GRU --optimizer=SGD_LR_SCHEDULE --initial_lr=10 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.1</li>
 <li>python Q5-ptb-lm.py --model=TRANSFORMER --optimizer=SGD_LR_SCHEDULE --initial_lr=20 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=6 --dp_keep_prob=0.9 --Q=5.1</li>
