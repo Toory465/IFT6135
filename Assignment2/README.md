@@ -1,6 +1,6 @@
 <h1> IFT6135 Assignment 2 Practical Solutions </h1>
 <h2> Guide to recreating our results: </h2>
-<h3>Question 4:</h3>
+<h3>Question 4</h2>
 <h3>4.1: [DONE]</h3>
 <ul>
   <li>python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --save_best</li>
@@ -36,7 +36,8 @@ Plot figures of models in 'final_res' directory by running the following command
 <li>python plot_script.py --Q=4.4</li>
 <li>python plot_script.py --Q=4.5</li>
 </ul>
-<h3>Question 5:</h3>
+<hr>
+<h2>Question 5</h2>
 <h3>5.1: [DONE]</h3>
 First, place the files {RNN_best_params.pt, GRU_best_params.pt, TRANSFORMER_best_params.pt} in the directory 'IFT6135/Assignment2/numpy_files/best_params/'. Then, run the following:<br><br>
 <li>python Q5-ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --Q=5.1</li>
