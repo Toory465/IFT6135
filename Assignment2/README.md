@@ -16,24 +16,26 @@
 <li>python ptb-lm.py --model=GRU --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35</li>
 <li>python ptb-lm.py --model=TRANSFORMER --optimizer=ADAM --initial_lr=0.001 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=2 --dp_keep_prob=.9</li>
 </ul>
-4.3: [DONE]
-python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=15 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35
-python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=15 --seq_len=35 --hidden_size=2000 --num_layers=2 --dp_keep_prob=0.35
-python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=30 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.3
-python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=40 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --num_epochs=50
-python ptb-lm.py --model=GRU --optimizer=SGD_LR_SCHEDULE --initial_lr=10 --batch_size=15 --seq_len=35 --hidden_size=2000 --num_layers=2 --dp_keep_prob=0.5
-python ptb-lm.py --model=GRU --optimizer=SGD_LR_SCHEDULE --initial_lr=10 --batch_size=20 --seq_len=20 --hidden_size=2000 --num_layers=2 --dp_keep_prob=0.5
-python ptb-lm.py --model=GRU --optimizer=SGD_LR_SCHEDULE --initial_lr=10 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.2
-python ptb-lm.py --model=TRANSFORMER --optimizer=SGD_LR_SCHEDULE --initial_lr=20 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=4 --dp_keep_prob=0.9
-python ptb-lm.py --model=TRANSFORMER --optimizer=ADAM --initial_lr=0.0001 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=2 --dp_keep_prob=.9
-python ptb-lm.py --model=TRANSFORMER --optimizer=ADAM --initial_lr=0.0001 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=2 --dp_keep_prob=.8
-
-FIGURES & TABLES: [DONE]
+<h3>4.3: [DONE]</h3>
+<ul>
+<li>python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=15 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35</li>
+<li>python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=15 --seq_len=35 --hidden_size=2000 --num_layers=2 --dp_keep_prob=0.35</li>
+<li>python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=30 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.3</li>
+<li>python ptb-lm.py --model=RNN --optimizer=ADAM --initial_lr=0.0001 --batch_size=20 --seq_len=40 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.35 --num_epochs=50</li>
+<li>python ptb-lm.py --model=GRU --optimizer=SGD_LR_SCHEDULE --initial_lr=10 --batch_size=15 --seq_len=35 --hidden_size=2000 --num_layers=2 --dp_keep_prob=0.5</li>
+<li>python ptb-lm.py --model=GRU --optimizer=SGD_LR_SCHEDULE --initial_lr=10 --batch_size=20 --seq_len=20 --hidden_size=2000 --num_layers=2 --dp_keep_prob=0.5</li>
+<li>python ptb-lm.py --model=GRU --optimizer=SGD_LR_SCHEDULE --initial_lr=10 --batch_size=20 --seq_len=35 --hidden_size=1500 --num_layers=2 --dp_keep_prob=0.2</li>
+<li>python ptb-lm.py --model=TRANSFORMER --optimizer=SGD_LR_SCHEDULE --initial_lr=20 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=4 --dp_keep_prob=0.9</li>
+<li>python ptb-lm.py --model=TRANSFORMER --optimizer=ADAM --initial_lr=0.0001 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=2 --dp_keep_prob=.9</li>
+<li>python ptb-lm.py --model=TRANSFORMER --optimizer=ADAM --initial_lr=0.0001 --batch_size=128 --seq_len=35 --hidden_size=512 --num_layers=2 --dp_keep_prob=.8</li>
+</ul>
+<h3>FIGURES & TABLES: [DONE]</h3>
 Plot figures of models in 'final_res' directory by running the following commands:
-python plot_script.py --Q=4.1
-python plot_script.py --Q=4.4
-python plot_script.py --Q=4.5
-
+<ul>
+<li>python plot_script.py --Q=4.1</li>
+<li>python plot_script.py --Q=4.4</li>
+<li>python plot_script.py --Q=4.5</li>
+</ul>
 ############################
 ####### QUESTION 5 #########
 ############################
