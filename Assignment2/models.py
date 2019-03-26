@@ -419,6 +419,21 @@ class MultiHeadedAttention(nn.Module):
         self.drop = nn.Dropout(p=dropout)
         self.linears = clones(nn.Linear(n_units, self.d_k*n_heads), 4)
         self.n_heads=n_heads
+        ##############################################################
+        ##### The initilization method that was asked to be implement
+        ##### is in the commented following section.
+        # def xavier_uniform_custom(tensor, gain=1):
+        #     fan_in = tensor.size(-1)
+        #     std = math.sqrt(1.0 / (fan_in ))
+        #     a = std  # Calculate uniform bounds from standard deviation
+        #     with torch.no_grad():
+        #         return tensor.uniform_(-a, a)     
+
+
+        # for p in self.parameters():
+        #     xavier_uniform_custom(p,gain=nn.init.calculate_gain('relu'))
+        #################################################################
+
         
     def forward(self, query, key, value, mask=None):
         # TODO: implement the masked multi-head attention.
